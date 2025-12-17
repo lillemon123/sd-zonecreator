@@ -2,7 +2,8 @@
 
 > A visual zone creation tool featuring an interactive map interface, real-time 3D preview, multiple export formats and more!
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f598d45-72ba-4e18-9af7-efec27adbcaa" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e56497fb-5f5a-4507-9966-0f6e4bb7a0bc" />
+
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ed58c11c-716d-44ee-aaac-eef6ed02a5fa" />
 
