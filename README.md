@@ -1,0 +1,136 @@
+# sd-zonecreator
+
+> A visual zone creation tool for FiveM featuring an interactive map interface, real-time 3D preview, and multiple export formats.
+
+![GitHub release](https://img.shields.io/github/v/release/Samuels-Development/sd-zonecreator?label=Release&logo=github)
+[![Discord](https://img.shields.io/discord/842045164951437383?label=Discord&logo=discord&logoColor=white)](https://discord.gg/FzPehMQaBQ)
+
+## 📋 Dependencies
+
+- [ox_lib](https://github.com/overextended/ox_lib)
+
+## 🎯 Features
+
+- **Interactive Map** - Click to place zone points on a GTA V map with satellite imagery
+- **Real-time 3D Preview** - View your zone in-game with a cinematic camera system
+- **Multiple Export Formats** - Export to PolyZone, ox_lib, vector2, or vector3 formats
+- **Import Support** - Paste existing zone code to edit and visualize zones
+- **Auto Ground Z** - Automatically calculates ground height for accurate zone placement
+- **Multi-Zone Management** - Create and manage multiple zones in a single session
+
+---
+
+## 📦 Installation
+
+1. [Download the latest release](https://github.com/Samuels-Development/sd-zonecreator/releases/latest) (ZIP, NOT SOURCE)
+2. Ensure `ox_lib` is started before `sd-zonecreator`
+3. Add `sd-zonecreator` to your resources folder
+4. Add `ensure sd-zonecreator` to your server.cfg
+
+---
+
+## 🛠️ Usage
+
+### Opening the Zone Creator
+
+Use the command to open the zone creator interface:
+
+```
+/zonecreator
+```
+
+### Creating a Zone
+
+1. Click on the map to place zone points
+2. Add at least 3 points to form a polygon
+3. Adjust the zone name, thickness, and ground Z as needed
+4. Use "View Zone" to preview your zone in-game with a 3D camera
+
+### Exporting Zones
+
+Click any of the export buttons to copy the zone data to your clipboard:
+
+| Format | Description |
+|--------|-------------|
+| **PolyZone** | Full PolyZone.Create code with all parameters |
+| **ox_lib** | Full lib.zones.poly code for ox_lib |
+| **vec2** | List of vector2 coordinates (x, y) |
+| **vec3** | List of vector3 coordinates (x, y, z) |
+
+### Importing Zones
+
+1. Click the "Import" tab
+2. Paste existing zone code (supports PolyZone, ox_lib, or vector formats)
+3. Click "Import Zone" to load the zone for editing
+
+### Zone Viewer Controls
+
+When viewing a zone in 3D:
+
+| Control | Action |
+|---------|--------|
+| **WASD** | Move camera horizontally |
+| **Q / E** | Move camera up / down |
+| **Mouse** | Look around |
+| **Scroll** | Adjust movement speed |
+| **ESC** | Exit viewer |
+
+---
+
+## 🎨 Export Examples
+
+### PolyZone Output
+
+```lua
+local myZone = PolyZone:Create({
+    vector2(100.0, 200.0),
+    vector2(150.0, 200.0),
+    vector2(150.0, 250.0),
+    vector2(100.0, 250.0),
+}, {
+    name = "myZone",
+    minZ = 25.0,
+    maxZ = 175.0,
+})
+```
+
+### ox_lib Output
+
+```lua
+local myZone = lib.zones.poly({
+    name = "myZone",
+    points = {
+        vec3(100.0, 200.0, 30.0),
+        vec3(150.0, 200.0, 30.0),
+        vec3(150.0, 250.0, 30.0),
+        vec3(100.0, 250.0, 30.0),
+    },
+    thickness = 150,
+    onEnter = function(self)
+        print('Entered', self.name)
+    end,
+    onExit = function(self)
+        print('Exited', self.name)
+    end,
+})
+```
+
+### vector2 Output
+
+```lua
+vector2(100.0, 200.0),
+vector2(150.0, 200.0),
+vector2(150.0, 250.0),
+vector2(100.0, 250.0),
+```
+
+### vector3 Output
+
+```lua
+vector3(100.0, 200.0, 30.0),
+vector3(150.0, 200.0, 30.0),
+vector3(150.0, 250.0, 30.0),
+vector3(100.0, 250.0, 30.0),
+```
+
+---
