@@ -5,6 +5,7 @@ import './NumberInput.css';
 interface NumberInputProps {
   value: number;
   onChange: (value: number) => void;
+  onBlur?: (value: number) => void;
   min?: number;
   max?: number;
   step?: number;
@@ -17,6 +18,7 @@ interface NumberInputProps {
 const NumberInput: React.FC<NumberInputProps> = ({
   value,
   onChange,
+  onBlur: onBlurCallback,
   min,
   max,
   step = 1,
@@ -58,10 +60,12 @@ const NumberInput: React.FC<NumberInputProps> = ({
     const parsed = parseFloat(inputValue);
     if (isNaN(parsed)) {
       setInputValue(String(value));
+      onBlurCallback?.(value);
     } else {
       const clamped = clampValue(parsed);
       setInputValue(String(clamped));
       onChange(clamped);
+      onBlurCallback?.(clamped);
     }
   };
 

@@ -1565,6 +1565,23 @@ const ZoneCreator: React.FC<ZoneCreatorProps> = ({ onClose }) => {
                             setZones(newZones);
                             saveToHistory(newZones, activeZoneId, true);
                           }}
+                          onBlur={(val) => {
+                            const newZones = zones.map(z => {
+                              if (z.id === zone.id) {
+                                return {
+                                  ...z,
+                                  groundZ: val,
+                                  points: z.points.map(p => ({
+                                    ...p,
+                                    gtaCoords: { ...p.gtaCoords, z: val }
+                                  }))
+                                };
+                              }
+                              return z;
+                            });
+                            setZones(newZones);
+                            saveToHistory(newZones, activeZoneId, true);
+                          }}
                           step={0.5}
                         />
                       </div>
