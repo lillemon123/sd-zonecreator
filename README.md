@@ -11,12 +11,74 @@
 
 ## 🎯 Features
 
-- **Interactive Map** - Click to place zone points on a GTA V map with satellite imagery
-- **Real-time 3D Preview** - View your zone in-game with a cinematic camera system
+### Core Features
+
+- **Interactive Map** - Click to place zone points on a high-resolution GTA V satellite map
+- **Real-time 3D Preview** - View your zone in-game with a free-fly camera system
 - **Multiple Export Formats** - Export to PolyZone, ox_lib, vector2, or vector3 formats
 - **Import Support** - Paste existing zone code to edit and visualize zones
-- **Auto Ground Z** - Automatically calculates ground height for accurate zone placement
+- **Auto Ground Z** - Automatically calculates ground height at the zone center
 - **Multi-Zone Management** - Create and manage multiple zones in a single session
+
+### Template Shapes
+
+Quickly create zones using pre-built shape templates:
+
+| Shape | Description |
+|-------|-------------|
+| **Rectangle** | 4-point square/rectangular zone |
+| **Circle** | 16-point circular approximation |
+| **Triangle** | 3-point triangular zone |
+| **Pentagon** | 5-point pentagonal zone |
+| **Hexagon** | 6-point hexagonal zone |
+| **Star** | 10-point star shape |
+| **L-Shape** | 6-point L-shaped zone |
+
+All templates support:
+- **Drag to Position** - Drag the center marker to reposition the shape
+- **Scale Slider** - Adjust the size from 5 to 3000 units
+- **Rotation Slider** - Rotate the shape from 0° to 360°
+
+### Point Management
+
+- **Click on Map** - Add a new point to the active zone
+- **Drag Points** - Click and drag any point marker to reposition it
+- **Right-click Point** - Delete a single point
+- **Click on Polygon Edge** - Insert a new point on the closest edge
+- **Shift + Drag** - Box select multiple points
+- **Delete Selected** - Remove all selected points at once
+
+### Zone Settings
+
+Each zone has configurable properties:
+
+| Setting | Description |
+|---------|-------------|
+| **Name** | Zone identifier (click pencil icon to rename) |
+| **Color** | Automatic color assignment (8 colors cycle) |
+| **Visibility** | Toggle zone display on/off |
+| **Ground Z** | Base height of the zone (auto-calculate or manual) |
+| **Thickness** | Vertical height of the zone |
+
+### Map Tools
+
+| Tool | Shortcut | Description |
+|------|----------|-------------|
+| **Snap to Grid** | `G` | Snap points to 10-unit grid (shows grid overlay) |
+| **Show Distances** | `D` | Display distance labels between adjacent points |
+| **Undo** | `Ctrl+Z` | Undo last action |
+| **Redo** | `Ctrl+Y` | Redo last undone action |
+| **Search Location** | `Ctrl+F` | Jump to specific X, Y coordinates |
+| **Jump to Player** | Button | Center map on your current position |
+
+### Additional Features
+
+- **Zoom Controls** - Mouse wheel or +/- buttons to zoom (displays zoom percentage)
+- **Coordinate Display** - Real-time cursor coordinates shown at bottom of map
+- **Player Marker** - Shows your in-game position on the map
+- **Active Zone Indicator** - Visual indicator showing which zone you're editing
+- **Point Tooltips** - Hover over points to see their exact coordinates
+- **Notifications** - Toast notifications for actions (copy, create, delete, etc.)
 
 ---
 
@@ -69,11 +131,12 @@ When viewing a zone in 3D:
 
 | Control | Action |
 |---------|--------|
-| **WASD** | Move camera horizontally |
+| **W A S D** | Move camera horizontally |
 | **Q / E** | Move camera up / down |
 | **Mouse** | Look around |
-| **Scroll** | Adjust movement speed |
-| **ESC** | Exit viewer |
+| **Shift** | Sprint (faster movement) |
+| **Arrow Up / Down** | Adjust zone thickness |
+| **Backspace** | Exit viewer and return to map |
 
 ---
 
@@ -132,5 +195,31 @@ vector3(150.0, 200.0, 30.0),
 vector3(150.0, 250.0, 30.0),
 vector3(100.0, 250.0, 30.0),
 ```
+
+---
+
+## ⌨️ Keyboard Shortcuts Quick Reference
+
+### Map Editor
+
+| Shortcut | Action |
+|----------|--------|
+| `G` | Toggle snap to grid |
+| `D` | Toggle distance labels |
+| `Ctrl+Z` | Undo |
+| `Ctrl+Y` or `Ctrl+Shift+Z` | Redo |
+| `Ctrl+F` | Open search/jump to location |
+| `Delete` or `Backspace` | Delete last point from active zone |
+| `Escape` | Close zone creator |
+
+### Zone Viewer (3D Preview)
+
+| Shortcut | Action |
+|----------|--------|
+| `W` `A` `S` `D` | Move camera |
+| `Q` / `E` | Move up / down |
+| `Shift` | Sprint |
+| `Arrow Up` / `Arrow Down` | Adjust thickness |
+| `Backspace` | Exit viewer |
 
 ---
