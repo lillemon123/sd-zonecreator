@@ -26,6 +26,7 @@
 - **Real-time 3D Preview** - View your zone in-game with a free-fly camera system
 - **Multiple Export Formats** - Export to PolyZone, ox_lib, vector2, or vector3 formats
 - **Import Support** - Paste existing zone code to edit and visualize zones
+- **Grid Mode** - Displays a grid overlay and snaps points to 10-unit intervals.
 - **Auto Ground Z** - Automatically calculates ground height at the zone center
 - **Multi-Zone Management** - Create and manage multiple zones in a single session
 
@@ -57,18 +58,6 @@ All templates support:
 - **Shift + Drag** - Box select multiple points
 - **Delete Selected** - Remove all selected points at once
 
-### Zone Settings
-
-Each zone has configurable properties:
-
-| Setting | Description |
-|---------|-------------|
-| **Name** | Zone identifier (click pencil icon to rename) |
-| **Color** | Automatic color assignment (8 colors cycle) |
-| **Visibility** | Toggle zone display on/off |
-| **Ground Z** | Base height of the zone (auto-calculate or manual) |
-| **Thickness** | Vertical height of the zone |
-
 ### Map Tools
 
 | Tool | Shortcut | Description |
@@ -79,17 +68,6 @@ Each zone has configurable properties:
 | **Redo** | `Ctrl+Y` | Redo last undone action |
 | **Search Location** | `Ctrl+F` | Jump to specific X, Y coordinates |
 | **Jump to Player** | Button | Center map on your current position |
-
-### Additional Features
-
-- **Zoom Controls** - Mouse wheel or +/- buttons to zoom (displays zoom percentage)
-- **Coordinate Display** - Real-time cursor coordinates shown at bottom of map
-- **Player Marker** - Shows your in-game position on the map
-- **Active Zone Indicator** - Visual indicator showing which zone you're editing
-- **Point Tooltips** - Hover over points to see their exact coordinates
-- **Notifications** - Toast notifications for actions (copy, create, delete, etc.)
-
----
 
 ## 📦 Installation
 
@@ -204,31 +182,3 @@ vector3(150.0, 200.0, 30.0),
 vector3(150.0, 250.0, 30.0),
 vector3(100.0, 250.0, 30.0),
 ```
-
----
-
-## ⌨️ Keyboard Shortcuts Quick Reference
-
-### Map Editor
-
-| Shortcut | Action |
-|----------|--------|
-| `G` | Toggle snap to grid |
-| `D` | Toggle distance labels |
-| `Ctrl+Z` | Undo |
-| `Ctrl+Y` or `Ctrl+Shift+Z` | Redo |
-| `Ctrl+F` | Open search/jump to location |
-| `Delete` or `Backspace` | Delete last point from active zone |
-| `Escape` | Close zone creator |
-
-### Zone Viewer (3D Preview)
-
-| Shortcut | Action |
-|----------|--------|
-| `W` `A` `S` `D` | Move camera |
-| `Q` / `E` | Move up / down |
-| `Shift` | Sprint |
-| `Arrow Up` / `Arrow Down` | Adjust thickness |
-| `Backspace` | Exit viewer |
-
----
